@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(demo)
+add_definitions(-std=c++11)
 add_subdirectory(02_01_InsertionSort)
 aux_source_directory(. SRC)
 add_executable(demo ${SRC})
