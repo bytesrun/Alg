@@ -22,3 +22,22 @@ void InsertionSort(vector<int> &nums) {
 		nums[i+1] = key;		
 	}
 }
+
+void re_helper(vector<int>& nums, int ed) {
+	if (ed == 0) return;
+	re_helper(nums, ed-1);
+	int key = nums[ed];
+	int i = ed - 1;
+	for (; i >= 0; --i) {
+		if (nums[i] <= key) {
+			break;
+		}
+		nums[i + 1] = nums[i];
+	}
+	nums[i + 1] = key;
+}
+	
+
+void InsertionSort_r(vector<int>& nums) {
+	re_helper(nums, nums.size()-1);
+}
