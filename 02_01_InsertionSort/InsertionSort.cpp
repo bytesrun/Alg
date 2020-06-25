@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include "InitNums.h"
 using namespace std;
 void test() {
 	std::cout << "TEST" << std::endl;
@@ -40,4 +41,21 @@ void re_helper(vector<int>& nums, int ed) {
 
 void InsertionSort_r(vector<int>& nums) {
 	re_helper(nums, nums.size()-1);
+}
+
+void Test_InsertSort() {
+	cout << "---Test InsertionSort START---" << endl;
+	vector<int> nums(InitNums(10));	
+	printNums(nums);
+	InsertionSort(nums);
+	printNums(nums);	
+	cout << "---Test InsertionSort END---" << endl << endl;
+}
+void Test_InsertSort_r() {
+	cout << "---Test InsertionSort_r START---" << endl;
+	vector<int> nums(InitNums(10));	
+	printNums(nums);
+	InsertionSort_r(nums);
+	printNums(nums);
+	cout << "---Test InsertionSort_r END---" << endl << endl;
 }

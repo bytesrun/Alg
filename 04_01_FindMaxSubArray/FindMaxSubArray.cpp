@@ -66,6 +66,6 @@ void Test_FindMaxSubArray(int n, vector<int>* pNums) {
 	printNums(nums);
 	vector<int> res(FindMaxSubArray(nums, 0, nums.size()-1));
 	printNums(res);
-	cout << "----Test_FindMaxSubArray END---" << endl;
+	cout << "----Test_FindMaxSubArray END---" << endl << endl;
 	
 }
