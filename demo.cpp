@@ -8,6 +8,7 @@
 #include "InitNums.h"
 #include "InsertionSort.h"
 #include "FindMaxSubArray.h"
+#include "test_matrix.h"
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -19,6 +20,7 @@ int main(int argc, char *argv[]) {
 	Test_InsertSort_r();
 	
 	Test_FindMaxSubArray();
+	Test_Matrix();
 	
 	return 0;
 }
