@@ -4,12 +4,14 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+#include "InitNums.h"
 using namespace std;
-
-vector<int> InitNums(int n) {
-	vector<int> tmp;
-	uniform_int_distribution<int> u(-100, 100);
+namespace {	
 	default_random_engine e(time(NULL));
+}
+vector<int> InitNums(int n, int st, int ed) {
+	vector<int> tmp;
+	uniform_int_distribution<int> u(st, ed);
 	for (int i=0; i<n; ++i) {
 		tmp.push_back(u(e));
 	}	
@@ -19,4 +21,11 @@ vector<int> InitNums(int n) {
 void printNums(vector<int> &nums) {
 	copy(nums.begin(), nums.end(), ostream_iterator<int>(std::cout, " "));
 	std::cout << std::endl;
+}
+
+int getRandomInt(int st, int ed)
+{
+	uniform_int_distribution<int> u(st, ed);
+	//default_random_engine e(time(NULL));
+	return u(e);
 }
