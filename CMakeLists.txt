@@ -22,6 +22,12 @@ if (MATRIX_MULTIPLY)
 	list(APPEND EXTRA_LIBS test_matrix)
 endif()
 
+option(RANDOMIZE_ARRAY "Usage: Test randomize_array" ON)
+if (RANDOMIZE_ARRAY)
+	add_subdirectory(05_02_randomize_array)
+	list(APPEND EXTRA_LIBS randomizeArray)
+endif()
+
 configure_file(configure.h.in configure.h)
 
 

@@ -5,5 +5,5 @@ using namespace std;
 
 vector<int> InitNums(int n = 10, int st = -100, int ed = 100);
 void printNums(vector<int> &nums);
-int getRandInt(int st = 100, int ed = 100);
+int getRandomInt(int st = 100, int ed = 100);
 #endif

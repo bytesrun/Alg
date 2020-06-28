@@ -21,6 +21,10 @@
 #include "test_matrix.h"
 #endif
 
+#ifdef RANDOMIZE_ARRAY
+#include "randomize_array.h"
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -38,6 +42,10 @@ int main(int argc, char *argv[]) {
 
 #ifdef MATRIX_MULTIPLY	
 	Test_Matrix();
+#endif
+
+#ifdef RANDOMIZE_ARRAY
+	Test_Randomize_Array();
 #endif
 	
 	return 0;
