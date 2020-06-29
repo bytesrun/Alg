@@ -2,3 +2,4 @@
 #cmakedefine FIND_MAX_SUBARRAY
 #cmakedefine MATRIX_MULTIPLY
 #cmakedefine RANDOMIZE_ARRAY
+#cmakedefine TEST_HEAP

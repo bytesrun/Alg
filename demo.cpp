@@ -25,6 +25,10 @@
 #include "randomize_array.h"
 #endif
 
+#ifdef TEST_HEAP
+#include "testheap.h"
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -46,6 +50,10 @@ int main(int argc, char *argv[]) {
 
 #ifdef RANDOMIZE_ARRAY
 	Test_Randomize_Array();
+#endif
+
+#ifdef TEST_HEAP
+	TestHeap();
 #endif
 	
 	return 0;
