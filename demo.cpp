@@ -53,7 +53,9 @@ int main(int argc, char *argv[]) {
 #endif
 
 #ifdef TEST_HEAP
-	TestHeap();
+	TestHeapSort();
+	std::cout << endl;
+	TestPriorityQueue();
 #endif
 	
 	return 0;

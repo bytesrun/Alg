@@ -1,3 +1,4 @@
+add_definitions(-std=c++11)
 aux_source_directory(. SRC)
 add_library(heapSort ${SRC})
 target_include_directories(heapSort
