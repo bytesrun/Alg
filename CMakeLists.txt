@@ -28,10 +28,16 @@ if (RANDOMIZE_ARRAY)
 	list(APPEND EXTRA_LIBS randomizeArray)
 endif()
 
-option(TEST_HEAP "Usage: Test Heap Sort" ON)
+option(TEST_HEAP "Usage: Test Heap Sort" OFF)
 if (TEST_HEAP)
 	add_subdirectory(06_TestHeap)
 	list(APPEND EXTRA_LIBS heapSort)
+endif()
+
+option(TEST_QUICK_SORT "Usage: Test Quick Sort" ON)
+if (TEST_QUICK_SORT)
+	add_subdirectory(07_QuickSort)
+	list(APPEND EXTRA_LIBS testQuickSort)
 endif()
 
 configure_file(configure.h.in configure.h)
