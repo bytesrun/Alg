@@ -29,6 +29,10 @@
 #include "testheap.h"
 #endif
 
+#ifdef TEST_QUICK_SORT
+# include "quick_sort.h"
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -56,6 +60,11 @@ int main(int argc, char *argv[]) {
 	TestHeapSort();
 	std::cout << endl;
 	TestPriorityQueue();
+#endif
+
+#ifdef TEST_QUICK_SORT
+	testQuickSort();
+	testRandomizedQuickSort();
 #endif
 	
 	return 0;

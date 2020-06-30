@@ -1,0 +1,2 @@
+void testQuickSort();
+void testRandomizedQuickSort();
