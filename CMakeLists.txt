@@ -34,10 +34,16 @@ if (TEST_HEAP)
 	list(APPEND EXTRA_LIBS heapSort)
 endif()
 
-option(TEST_QUICK_SORT "Usage: Test Quick Sort" ON)
+option(TEST_QUICK_SORT "Usage: Test Quick Sort" OFF)
 if (TEST_QUICK_SORT)
 	add_subdirectory(07_QuickSort)
 	list(APPEND EXTRA_LIBS testQuickSort)
+endif()
+
+option(LINEAR_TIME_SORT "Usage: Test Linear Time SORT" ON)
+if (LINEAR_TIME_SORT)
+	add_subdirectory(08_LinearTimeSort)
+	list(APPEND EXTRA_LIBS linearTimeSort)
 endif()
 
 configure_file(configure.h.in configure.h)
