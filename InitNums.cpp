@@ -18,10 +18,21 @@ vector<int> InitNums(int n, int st, int ed) {
 	return tmp;
 }
 
+vector<double> InitDoubleNums(int n, double st, double ed) {
+	vector<double> tmp;
+	uniform_real_distribution<double> u(st, ed);
+	for (int i=0; i<n; ++i) {
+		tmp.push_back(u(e));
+	}	
+	//cout << u.max() << endl;
+	//cout << u.min() << endl;
+	return tmp;
+}
+/*
 void printNums(vector<int> &nums) {
 	copy(nums.begin(), nums.end(), ostream_iterator<int>(std::cout, " "));
 	std::cout << std::endl;
-}
+}*/
 
 int getRandomInt(int st, int ed)
 {

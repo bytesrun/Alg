@@ -33,6 +33,10 @@
 # include "quick_sort.h"
 #endif
 
+#ifdef LINEAR_TIME_SORT
+# include "linearTimeSort.h"
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -65,6 +69,12 @@ int main(int argc, char *argv[]) {
 #ifdef TEST_QUICK_SORT
 	testQuickSort();
 	testRandomizedQuickSort();
+#endif
+
+#ifdef LINEAR_TIME_SORT
+	TestCountSort();
+	TestRadixSort();
+	TestBucketSort();
 #endif
 	
 	return 0;

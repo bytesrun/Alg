@@ -4,3 +4,4 @@
 #cmakedefine RANDOMIZE_ARRAY
 #cmakedefine TEST_HEAP
 #cmakedefine TEST_QUICK_SORT
+#cmakedefine LINEAR_TIME_SORT
