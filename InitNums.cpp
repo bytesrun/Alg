@@ -9,6 +9,15 @@ using namespace std;
 namespace {	
 	default_random_engine e(time(NULL));
 }
+
+ostream& operator << (ostream& os, vector<int>& nums) {
+	for (auto num : nums) {
+		os << num << " ";
+	}
+	os << endl;
+	return os;
+}
+
 vector<int> InitNums(int n, int st, int ed) {
 	vector<int> tmp;
 	uniform_int_distribution<int> u(st, ed);

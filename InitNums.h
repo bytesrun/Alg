@@ -13,5 +13,7 @@ void printNums(vector<T> &nums) {
 	copy(nums.begin(), nums.end(), ostream_iterator<T>(std::cout, " "));
 	std::cout << std::endl;
 }
+
+ostream& operator << (ostream& os, vector<int>& nums);
 int getRandomInt(int st = 100, int ed = 100);
 #endif
