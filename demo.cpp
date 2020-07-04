@@ -37,6 +37,10 @@
 # include "linearTimeSort.h"
 #endif
 
+#ifdef TEST_SELECT_ALG
+# include "testSelectAlg.h" 
+#endif
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -75,6 +79,12 @@ int main(int argc, char *argv[]) {
 	TestCountSort();
 	TestRadixSort();
 	TestBucketSort();
+#endif
+
+#ifdef TEST_SELECT_ALG
+	testMinMax();
+	RandomizedSelect_KthElement();
+	Select_KthElement();
 #endif
 	
 	return 0;

@@ -40,10 +40,16 @@ if (TEST_QUICK_SORT)
 	list(APPEND EXTRA_LIBS testQuickSort)
 endif()
 
-option(LINEAR_TIME_SORT "Usage: Test Linear Time SORT" ON)
+option(LINEAR_TIME_SORT "Usage: Test Linear Time SORT" OFF)
 if (LINEAR_TIME_SORT)
 	add_subdirectory(08_LinearTimeSort)
 	list(APPEND EXTRA_LIBS linearTimeSort)
+endif()
+
+option(TEST_SELECT_ALG "Usage: Test Select Alg" ON)
+if (TEST_SELECT_ALG)
+	add_subdirectory(09_TestSelectAlg)
+	list(APPEND EXTRA_LIBS testSelectAlg)
 endif()
 
 configure_file(configure.h.in configure.h)
