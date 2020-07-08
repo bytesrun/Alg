@@ -18,15 +18,15 @@
 #endif 
 
 #ifdef MATRIX_MULTIPLY
-#include "test_matrix.h"
+# include "test_matrix.h"
 #endif
 
 #ifdef RANDOMIZE_ARRAY
-#include "randomize_array.h"
+# include "randomize_array.h"
 #endif
 
 #ifdef TEST_HEAP
-#include "testheap.h"
+# include "testheap.h"
 #endif
 
 #ifdef TEST_QUICK_SORT
@@ -39,6 +39,10 @@
 
 #ifdef TEST_SELECT_ALG
 # include "testSelectAlg.h" 
+#endif
+
+#ifdef TEST_BASIC_DS
+# include "basicDataSt.h"
 #endif
 
 using namespace std;
@@ -86,6 +90,12 @@ int main(int argc, char *argv[]) {
 	RandomizedSelect_KthElement();
 	Select_KthElement();
 #endif
-	
+
+#ifdef TEST_BASIC_DS
+	testMyStack();
+	testMyQueue();
+	testMyList();
+#endif
+
 	return 0;
 }
