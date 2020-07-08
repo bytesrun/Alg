@@ -7,7 +7,8 @@
 #include "InitNums.h"
 using namespace std;
 namespace {	
-	default_random_engine e(time(NULL));
+	static default_random_engine e(time(NULL));
+	static uniform_int_distribution<int> urand(0, 100);
 }
 
 ostream& operator << (ostream& os, vector<int>& nums) {
@@ -45,7 +46,8 @@ void printNums(vector<int> &nums) {
 
 int getRandomInt(int st, int ed)
 {
-	uniform_int_distribution<int> u(st, ed);
+	//uniform_int_distribution<int> u(st, ed);
 	//default_random_engine e(time(NULL));
-	return u(e);
+	int tmp = urand(e);
+	return urand(e);
 }

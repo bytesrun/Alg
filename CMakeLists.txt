@@ -46,10 +46,16 @@ if (LINEAR_TIME_SORT)
 	list(APPEND EXTRA_LIBS linearTimeSort)
 endif()
 
-option(TEST_SELECT_ALG "Usage: Test Select Alg" ON)
+option(TEST_SELECT_ALG "Usage: Test Select Alg" OFF)
 if (TEST_SELECT_ALG)
 	add_subdirectory(09_TestSelectAlg)
 	list(APPEND EXTRA_LIBS testSelectAlg)
+endif()
+
+option(TEST_BASIC_DS "Usage: Basic Data Structure" ON)
+if (TEST_BASIC_DS)
+	add_subdirectory(10_BasicDataStructure)
+	list(APPEND EXTRA_LIBS basicDataSt)
 endif()
 
 configure_file(configure.h.in configure.h)
