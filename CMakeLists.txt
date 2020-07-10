@@ -52,10 +52,16 @@ if (TEST_SELECT_ALG)
 	list(APPEND EXTRA_LIBS testSelectAlg)
 endif()
 
-option(TEST_BASIC_DS "Usage: Basic Data Structure" ON)
+option(TEST_BASIC_DS "Usage: Basic Data Structure" OFF)
 if (TEST_BASIC_DS)
 	add_subdirectory(10_BasicDataStructure)
 	list(APPEND EXTRA_LIBS basicDataSt)
+endif()
+
+option(TEST_BST "Usage: Test BinarySearchTree" ON)
+if (TEST_BST)
+	add_subdirectory(12_BinarySearchTree)
+	list(APPEND EXTRA_LIBS binarySearchTree)
 endif()
 
 configure_file(configure.h.in configure.h)

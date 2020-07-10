@@ -7,3 +7,4 @@
 #cmakedefine LINEAR_TIME_SORT
 #cmakedefine TEST_SELECT_ALG
 #cmakedefine TEST_BASIC_DS
+#cmakedefine TEST_BST
