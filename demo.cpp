@@ -45,6 +45,11 @@
 # include "basicDataSt.h"
 #endif
 
+#ifdef TEST_BST
+# include "binarySearchTree.h"
+#endif
+
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -95,6 +100,10 @@ int main(int argc, char *argv[]) {
 	testMyStack();
 	testMyQueue();
 	testMyList();
+#endif
+
+#ifdef TEST_BST
+	TestBST();
 #endif
 
 	return 0;
