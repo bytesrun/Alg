@@ -48,6 +48,8 @@ int getRandomInt(int st, int ed)
 {
 	//uniform_int_distribution<int> u(st, ed);
 	//default_random_engine e(time(NULL));
-	int tmp = urand(e);
-	return urand(e);
+	/*int tmp = urand(e);
+	return urand(e);*/
+	uniform_int_distribution<int> u(st, ed);
+	return u(e);
 }

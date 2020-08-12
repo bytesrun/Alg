@@ -49,7 +49,9 @@
 # include "binarySearchTree.h"
 #endif
 
-
+#ifdef TEST_UNION
+# include "TestUnion.h"
+#endif
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -104,6 +106,10 @@ int main(int argc, char *argv[]) {
 
 #ifdef TEST_BST
 	TestBST();
+#endif
+
+#ifdef TEST_UNION
+	TestUnion();
 #endif
 
 	return 0;

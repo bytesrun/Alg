@@ -8,3 +8,4 @@
 #cmakedefine TEST_SELECT_ALG
 #cmakedefine TEST_BASIC_DS
 #cmakedefine TEST_BST
+#cmakedefine TEST_UNION
