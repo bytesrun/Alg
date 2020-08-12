@@ -58,10 +58,16 @@ if (TEST_BASIC_DS)
 	list(APPEND EXTRA_LIBS basicDataSt)
 endif()
 
-option(TEST_BST "Usage: Test BinarySearchTree" ON)
+option(TEST_BST "Usage: Test BinarySearchTree" OFF)
 if (TEST_BST)
 	add_subdirectory(12_BinarySearchTree)
 	list(APPEND EXTRA_LIBS binarySearchTree)
+endif()
+
+option(TEST_UNION "Usage: Test Union" ON)
+if (TEST_UNION) 
+	add_subdirectory(21_TestUnion)
+	list(APPEND EXTRA_LIBS testUnion)
 endif()
 
 configure_file(configure.h.in configure.h)
